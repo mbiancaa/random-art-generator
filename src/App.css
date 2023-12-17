@@ -53,7 +53,7 @@
 }
 
 .CanvasContainer {
-  padding: 20px 0;
+  padding: 20px 0 40px 0;
 }
 
 .CanvasGrid {
@@ -70,4 +70,17 @@
 .CanvasColumn {
   width: 100%;
   display: flex;
+}
+
+@media (max-width: 1024px) {
+
+  .CanvasGrid {
+    width: 80vw;
+  }
+
+  .Shape {
+    width: 16vw;
+    height: 16vw;
+  }
+
 }
