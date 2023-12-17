@@ -1,38 +1,73 @@
 .App {
   text-align: center;
+  padding: 60px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Shape {
+  width: 10vw;
+  height: 10vw;
+  overflow: hidden;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Shape > * {
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Circle {
+  border-radius: 50%;
+}
+
+.Circle.small {
+  width: calc(100%);
+  height: calc(100%);
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+}
+
+.Circle.big {
+  width: calc(100% * 2);
+  height: calc(100% * 2);
+
+  top: 1vw;
+  left: 1vw;
+  z-index: 2;
+}
+
+.default .Circle.small{
+  top: 0;
+}
+
+.default .Circle.big {
+  top: 0;
+  left: 0;
+}
+
+.Square {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.CanvasContainer {
+  padding: 20px 0;
+}
+
+.CanvasGrid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  width: 50vw;
+  margin: auto;
+  padding: 2vw;
+  border-radius: 1vw;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.CanvasColumn {
+  width: 100%;
+  display: flex;
 }
