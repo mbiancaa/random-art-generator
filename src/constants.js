@@ -1,8 +1,8 @@
 export const customColors = [
-    "#000000",
-    "#ffffff",
-    "#d0216a",
-    "#f8f8f8"
+    "#00002a",
+    "#eff2f0",
+    "#17266c",
+    "#4d598d"
 ];
 
 export const rotationDegrees = [0, 90, 180, 270, 360];
